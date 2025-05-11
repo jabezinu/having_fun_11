@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary-color: #8B5CF6;
+    --primary-hover: #7C3AED;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
@@ -14,21 +19,27 @@ body {
 /* Navigation */
 .navbar {
     position: fixed;
-    top: 0;
-    width: 100%;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1200px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 5%;
-    background-color: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 1rem 2rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 50px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     z-index: 1000;
+    transition: all 0.3s ease;
 }
 
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #e74c3c;
+    color: var(--primary-color);
 }
 
 .nav-links {
@@ -48,7 +59,7 @@ body {
 }
 
 .nav-links a:hover {
-    color: #e74c3c;
+    color: var(--primary-color);
 }
 
 /* Hero Section */
@@ -81,7 +92,7 @@ body {
 .cta-button {
     display: inline-block;
     padding: 1rem 2rem;
-    background-color: #e74c3c;
+    background-color: var(--primary-color);
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -89,7 +100,7 @@ body {
 }
 
 .cta-button:hover {
-    background-color: #c0392b;
+    background-color: var(--primary-hover);
 }
 
 /* Menu Section */
@@ -121,7 +132,7 @@ body {
 }
 
 .category-btn.active {
-    background-color: #e74c3c;
+    background-color: var(--primary-color);
     color: white;
 }
 
@@ -159,7 +170,7 @@ body {
 
 .menu-item .price {
     padding: 0 1rem;
-    color: #e74c3c;
+    color: var(--primary-color);
     font-weight: bold;
 }
 
@@ -232,7 +243,7 @@ body {
 
 .info-item i {
     font-size: 1.5rem;
-    color: #e74c3c;
+    color: var(--primary-color);
 }
 
 .contact-form {
@@ -256,7 +267,7 @@ body {
 
 .submit-btn {
     padding: 1rem;
-    background-color: #e74c3c;
+    background-color: var(--primary-color);
     color: white;
     border: none;
     border-radius: 5px;
@@ -265,7 +276,7 @@ body {
 }
 
 .submit-btn:hover {
-    background-color: #c0392b;
+    background-color: var(--primary-hover);
 }
 
 /* Footer */
@@ -288,7 +299,7 @@ footer {
 }
 
 .social-links a:hover {
-    color: #e74c3c;
+    color: var(--primary-color);
 }
 
 /* Responsive Design */
