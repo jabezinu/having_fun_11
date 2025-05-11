@@ -132,4 +132,69 @@ window.addEventListener('scroll', () => {
     } else {
         navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.8)';
     }
-}); 
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    let clickCount = 0;
+    const secretTrigger = document.getElementById('secret-trigger');
+    const secretMenu = document.getElementById('secret-menu');
+    let clickTimeout;
+
+    secretTrigger.addEventListener('click', () => {
+        clickCount++;
+        
+        // Reset click count after 2 seconds of inactivity
+        clearTimeout(clickTimeout);
+        clickTimeout = setTimeout(() => {
+            clickCount = 0;
+        }, 2000);
+
+        if (clickCount === 3) {
+            secretMenu.style.display = 'block';
+            secretMenu.style.animation = 'fadeIn 0.5s ease-in';
+            clickCount = 0;
+            
+            // Add a fun effect
+            document.body.style.backgroundColor = '#f0f0f0';
+            setTimeout(() => {
+                document.body.style.backgroundColor = '';
+            }, 500);
+        }
+    });
+});
+
+// Add some fun animations
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .secret-menu-section {
+        background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+        padding: 2rem;
+        margin: 2rem 0;
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+
+    .secret-menu-section h2 {
+        text-align: center;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    }
+
+    .menu-item {
+        background: rgba(255,255,255,0.9);
+        padding: 1rem;
+        margin: 1rem 0;
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+    }
+
+    .menu-item:hover {
+        transform: scale(1.02);
+    }
+`;
+document.head.appendChild(style); 
