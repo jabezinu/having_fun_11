@@ -132,6 +132,43 @@ body {
     padding: 2rem 0;
 }
 
+.menu-item {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+}
+
+.menu-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.menu-item h3 {
+    padding: 1rem;
+    margin: 0;
+    color: #333;
+}
+
+.menu-item .price {
+    padding: 0 1rem;
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.menu-item .description {
+    padding: 0 1rem 1rem;
+    color: #666;
+    font-size: 0.9rem;
+}
+
 /* About Section */
 .about-section {
     padding: 5rem 5%;
@@ -156,6 +193,9 @@ body {
 
 .about-image img {
     width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
@@ -268,6 +308,14 @@ footer {
     
     .hero h1 {
         font-size: 2.5rem;
+    }
+    
+    .about-image img {
+        height: 300px;
+    }
+    
+    .menu-item img {
+        height: 180px;
     }
 }
 
