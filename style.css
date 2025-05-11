@@ -8,12 +8,16 @@
 :root {
     --primary-color: #8B5CF6;
     --primary-hover: #7C3AED;
+    --background-color: #2D1B69;
+    --text-color: #E9E4F0;
+    --card-bg: #3D2B7D;
 }
 
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: var(--text-color);
+    background-color: var(--background-color);
 }
 
 /* Navigation */
@@ -28,7 +32,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(45, 27, 105, 0.9);
     backdrop-filter: blur(10px);
     border-radius: 50px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -39,7 +43,7 @@ body {
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
-    color: var(--primary-color);
+    color: var(--text-color);
 }
 
 .nav-links {
@@ -53,7 +57,7 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    color: #333;
+    color: var(--text-color);
     font-weight: 500;
     transition: color 0.3s ease;
 }
@@ -65,7 +69,7 @@ body {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    background: linear-gradient(rgba(45, 27, 105, 0.8), rgba(45, 27, 105, 0.8)),
                 url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3') center/cover;
     display: flex;
     align-items: center;
@@ -106,7 +110,7 @@ body {
 /* Menu Section */
 .menu-section {
     padding: 5rem 5%;
-    background-color: #f9f9f9;
+    background-color: var(--background-color);
 }
 
 .menu-section h2 {
@@ -144,7 +148,7 @@ body {
 }
 
 .menu-item {
-    background: white;
+    background: var(--card-bg);
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -165,7 +169,7 @@ body {
 .menu-item h3 {
     padding: 1rem;
     margin: 0;
-    color: #333;
+    color: var(--text-color);
 }
 
 .menu-item .price {
@@ -176,13 +180,14 @@ body {
 
 .menu-item .description {
     padding: 0 1rem 1rem;
-    color: #666;
+    color: #B8A6D9;
     font-size: 0.9rem;
 }
 
 /* About Section */
 .about-section {
     padding: 5rem 5%;
+    background-color: var(--background-color);
 }
 
 .about-section h2 {
@@ -214,7 +219,7 @@ body {
 /* Contact Section */
 .contact-section {
     padding: 5rem 5%;
-    background-color: #f9f9f9;
+    background-color: var(--card-bg);
 }
 
 .contact-section h2 {
@@ -255,7 +260,9 @@ body {
 .contact-form input,
 .contact-form textarea {
     padding: 1rem;
-    border: 1px solid #ddd;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border: 1px solid var(--primary-color);
     border-radius: 5px;
     font-size: 1rem;
 }
@@ -281,7 +288,7 @@ body {
 
 /* Footer */
 footer {
-    background-color: #333;
+    background-color: var(--card-bg);
     color: white;
     padding: 2rem 5%;
     text-align: center;
@@ -339,7 +346,7 @@ footer {
 .burger div {
     width: 25px;
     height: 3px;
-    background-color: #333;
+    background-color: var(--text-color);
     margin: 5px;
     transition: all 0.3s ease;
 } 
