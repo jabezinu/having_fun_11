@@ -34,19 +34,20 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: rgba(30, 27, 75, 0.8);
-    backdrop-filter: blur(10px);
+    background-color: rgba(30, 27, 75, 0.6);
+    backdrop-filter: blur(8px);
     border-radius: 50px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
     z-index: 1000;
     transition: all 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
-    color: var(--text-color);
+    color: #ffffff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .nav-links {
@@ -60,19 +61,20 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    color: var(--text-color);
-    font-weight: 500;
+    color: #ffffff;
+    font-weight: 600;
     transition: color 0.3s ease;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .nav-links a:hover {
-    color: var(--primary-color);
+    color: #a5b4fc;
 }
 
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(30, 27, 75, 0.9), rgba(30, 27, 75, 0.9)),
+    background: linear-gradient(rgba(30, 27, 75, 0.3), rgba(30, 27, 75, 0.3)),
                 url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3') center/cover;
     display: flex;
     align-items: center;
@@ -84,16 +86,21 @@ body {
 .hero-content {
     max-width: 800px;
     padding: 2rem;
+    background-color: rgba(30, 27, 75, 0.7);
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
 }
 
 .hero h1 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .hero p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .cta-button {
